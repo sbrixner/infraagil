@@ -1,0 +1,4 @@
+---
+
+- name: playbook padrao
+  include: apache.yml

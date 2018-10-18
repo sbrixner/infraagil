@@ -1,0 +1,8 @@
+---
+
+- name: playbook puppet
+  include: repo.yml
+- name: playbook install puppet agent
+  include: agent.yml
+- name: playbook install puppet server
+  include: server.yml

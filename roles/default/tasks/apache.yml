@@ -1,0 +1,8 @@
+---
+ - name: cp aquivos apache   maquinas
+   copy:
+     src: "{{item.origem}}"
+     dest: "{{item.destino}}"
+   with_items:
+     - { origem: files/index, destino: /var/www/html/index.html }
+  

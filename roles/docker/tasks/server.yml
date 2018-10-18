@@ -1,0 +1,6 @@
+---
+- name: instalando puppt agent
+  package:
+    name: puppetserver
+    state: present
+  when: ansible_hostname == "devops"

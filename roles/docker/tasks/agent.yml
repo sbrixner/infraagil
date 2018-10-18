@@ -1,0 +1,11 @@
+---
+- name: instalando puppt agent 
+  package:
+    name: puppet-agent
+    update_cache: yes
+    state: present
+- name: startando puppt agent 
+  service:
+    name: puppet
+    state: restarted
+  when: ansible_os_family == "RedHat"
