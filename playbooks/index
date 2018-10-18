@@ -1,0 +1,9 @@
+<marquee>
+<h3> Teste  Index
+Nome da maquina {{ansible_hostname}}
+<br>
+IP da maquina {{ansible_default_ipv4.address}}
+<br>
+IP da maquina {{ansible_os_family}}
+</h3>
+</marquee>

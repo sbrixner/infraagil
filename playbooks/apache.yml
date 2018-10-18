@@ -1,0 +1,18 @@
+---
+ - name: conf apache
+   hosts: all
+   vars:
+    - maquina: default
+   tasks:
+      - name: testando arquivo profile
+        package:
+         name: apache2
+        when: ansible_os_family == "Debian" 
+      - name: testando arquivo profile
+        package:
+         name: httpd
+        when: ansible_os_family == "Redhat" 
+      - name: testando arquivo profile
+        template:
+         src: index
+         dest: /var/www/html/index.html 

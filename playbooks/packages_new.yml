@@ -1,0 +1,26 @@
+---
+ - name: primeira playbook
+   hosts: all
+   tasks:
+      - name: install pack
+        package:
+          name: 
+            - vim
+            - cowsay
+            - htop
+            - figlet
+            - apache2
+          state: present
+        when: ansible_os_family == "Debian"
+
+      - name: install apache2
+        package:
+          name: 
+            - httpd
+            - cowsey
+            - vim
+            - epel-release
+            - htop
+            - figlet 
+          state: present
+        when: ansible_os_family == "Redhat"

@@ -1,0 +1,12 @@
+---
+- name: variavel playbook
+  hosts: "{{maquina}}"
+  vars:
+    - maquina: default
+    - pack: pack
+  tasks:
+   - name:
+     package:
+       name: "{{pack}}"
+       state: present
+ 

@@ -1,0 +1,16 @@
+---
+ - name: primeira playbook
+   hosts: all
+   tasks:
+      - name: add user
+        user:
+         name: "{{ item }}"
+         password: '$1$nFdzjoXj$ZQMdxVrHLoPLmCkixmXlo0'
+         shell: /bin/bash
+         home: /home/ "{{ item }}"
+        with_items:
+          - devops
+          - developer
+          - samuel
+
+

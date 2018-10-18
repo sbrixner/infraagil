@@ -1,0 +1,5 @@
+---
+- name: altera index html
+  hosts: all
+  roles:
+    - puppet

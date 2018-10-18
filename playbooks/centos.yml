@@ -1,0 +1,10 @@
+---
+- name: pack default Centos
+  pachage:
+    name:
+      - figlet
+      - cowsey
+      - htop
+      - epel-release
+      - sysstat
+    state: present

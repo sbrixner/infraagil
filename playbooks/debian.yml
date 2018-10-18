@@ -1,0 +1,10 @@
+---
+- name: pack default Debian
+  pachage:
+    name:
+      - figlet
+      - cowsey
+      - htop
+      - sysstat
+    update_cache: yes
+    state: present

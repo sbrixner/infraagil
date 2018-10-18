@@ -1,0 +1,12 @@
+---
+
+- name: playbook padrao
+  include: user.yml
+- name: padrao debian
+  include: debian.yml
+  when: ansible_os_family == "Debian"
+- name: padrao centos
+  include: centos.yml
+  when: ansible_os_family == "RedHat"
+- name:
+  include: arquivo.yml

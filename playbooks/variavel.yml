@@ -1,0 +1,12 @@
+---
+- name: variavel playbook
+  hosts: "{{maquina}}"
+  vars:
+    - maquina: default
+    - usuario: usuario
+  tasks:
+   - name:
+     user:
+       name: "{{usuario}}"
+       state: present
+ 
